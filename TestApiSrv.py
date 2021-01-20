@@ -86,9 +86,11 @@ def getOrdersReq():
     for p in params:
         print("Can You See a RequestHeader? " + p)
     # JSONファイルを読込んで還す
+    '''
     p = ['refundGet.json', 'refundGetF.json', 'refundGetW.json']
     pt = random.choice(p)
-    f = open(pt, 'r', encoding="utf-8_sig")
+    '''
+    f = open('ordersRes.json', 'r', encoding="utf-8_sig")
     # f = open('cpmGetting.json', 'r', encoding="utf-8_sig")
     jsn = json.load(f)
     resjson: bytes = json.dumps(jsn).encode("utf-8")
