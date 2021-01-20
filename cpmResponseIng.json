@@ -1,0 +1,20 @@
+{
+  "returnCode": "MP10000",
+  "returnMessage": "",
+  "msgSummaryCode": "     ",
+  "msgSummary": "",
+  "result": {
+    "partner_order_id": "11234567890123456789",
+    "currency": "JPY",
+    "order_id": "ORDER ID IS NOTHING BECAUSE YOU ARE AWSOME SO MUCH...",
+    "return_code": "SUCCESS",
+    "result_code": "PAYING",
+    "create_time": "1900-01-01 00:00:00",
+    "total_fee": 99999999,
+    "real_fee": 99999990,
+    "channel": "DorakutenAmazonPay",
+    "pay_time": "1901/02/01 23:59:59",
+    "order_body": "取引備考 支払い処理中です"
+  },
+  "balanceAmount": 1234567890
+}

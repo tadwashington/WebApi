@@ -1,0 +1,112 @@
+{
+  "returnCode": "MP10000",
+  "returnMessage": "",
+  "msgSummaryCode": "",
+  "msgSummary": "",
+  "result": {
+    "credentialKey": "AUTHENABLE0010010010123456789012",
+    "partnerFullName": "株式会社　コナミスポーツ",
+    "description": "取引単位で備考をつける項目？らしい",
+    "adminPassword": "I don't know how use this",
+    "authForRefund": 1,
+    "cashNumber": "kscl9901",
+    "warningWord": "auPAY専用の警告文言",
+    "checkSnFlag": 0,
+    "merchantFullName": "店舗名称　管理画面で返却された値を返却１",
+    "merchantName": "店舗略称　管理画面で返却された値を返却２",
+    "merchantKanaName": "店舗名称(カナ) 管理画面で返却された値を返却２",
+    "prefectures": "沖縄県",
+    "city": "春日部市",
+    "street": "14-5-１０",
+    "address": "北海道加茂川郡三崎口丹波橋南詰５－０９-80",
+    "contactPhoneNum":"+81442-233-9180",
+    "email": "yuubin@email.com.jp",
+    "contactHomeUrl": "https://www.konamisports.com/siten01/",
+    "qrProvisionMethod": "ABc",
+    "merchantId": 76543210,
+    "pwChangedFlag": 1,
+    "payTypeList": [
+      {
+        "payTypeId":1,
+        "payTypeCode": "Alipay",
+        "payTypeName": "Alipay",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":2,
+        "payTypeCode": "Wechat",
+        "payTypeName": "Wechat",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":3,
+        "payTypeCode": "Docomo",
+        "payTypeName": "d払い",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":4,
+        "payTypeCode": "auPAY",
+        "payTypeName": "auPAY",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":5,
+        "payTypeCode": "PayPay",
+        "payTypeName": "PayPay",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":6,
+        "payTypeCode": "LINEPay",
+        "payTypeName": "LINEPay",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":7,
+        "payTypeCode": "RakutenPay",
+        "payTypeName": "楽天ペイ",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":8,
+        "payTypeCode": "GinkoPay",
+        "payTypeName": "銀行Pay",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":9,
+        "payTypeCode": "merpay",
+        "payTypeName": "メルペイ",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      },
+      {
+        "payTypeId":10,
+        "payTypeCode": "QUOPay",
+        "payTypeName": "QUOカード Pay",
+        "qrcodeRegExr":"WHO+WHEN+WHERE+WHAT+WHY",
+        "dispQrcodeFlag": 1,
+        "readQrcodeFlag": 1
+      }
+    ]
+  },
+  "balanceAmount": null
+}
