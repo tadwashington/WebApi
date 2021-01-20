@@ -12,7 +12,7 @@ import random
 apps = Flask(__name__)
 
 
-# @apps.route("/", methods=['GET'])
+# 支払確認API
 @apps.route("/gateway/api/v1/qr/checkorder", methods=['GET'])
 def getCPMReq():
     params = request.args
@@ -43,8 +43,35 @@ def getCPMReq():
     return make_response(resjson)
 
 
+# 返金確認API
 @apps.route("/gateway/api/v1/qr/checkrefunds", methods=['GET'])
 def getRefundReq():
+    params = request.args
+    headers = request.headers
+    # print("Can You See a Content-Type? " + headers.get('Content-Type'))
+    '''
+    Http Request Header 確認
+    '''
+    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
+    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
+    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
+    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
+    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    for p in params:
+        print("Can You See a RequestHeader? " + p)
+    # JSONファイルを読込んで還す
+    p = ['refundGet.json', 'refundGetF.json', 'refundGetW.json']
+    pt = random.choice(p)
+    f = open(pt, 'r', encoding="utf-8_sig")
+    # f = open('cpmGetting.json', 'r', encoding="utf-8_sig")
+    jsn = json.load(f)
+    resjson: bytes = json.dumps(jsn).encode("utf-8")
+    return make_response(resjson)
+
+
+# 取引照会(店舗単位)API
+@apps.route("/gateway/api/v1/qr/orders", methods=['GET'])
+def getOrdersReq():
     params = request.args
     headers = request.headers
     # print("Can You See a Content-Type? " + headers.get('Content-Type'))

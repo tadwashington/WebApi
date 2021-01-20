@@ -1,0 +1,57 @@
+{
+  "returnCode": "MP10000",
+  "returnMessage": "",
+  "msgSummaryCode": "     ",
+  "msgSummary": "",
+  "result": {
+    "return_code": "SUCCESS",
+    "orderDate": "20211231",
+    "result_code": null,
+    "transaction_count": null,
+    "data": [
+       {
+        "record_type": "Credit",
+        "status": "SUCCESS",
+        "partner_order_id": "1123456789021234567890",
+        "currency": "JPY",
+        "create_time": "2021/12/31 23:59:59",
+        "channel": "auPAY",
+        "real_fee": 99999999,
+        "order_body": "決済時に入力された取引備考",
+        "order_id": "Original ID OF Each Brands",
+        "partner_refund_id": "when it Only Refund Method",
+        "refund_id": "Also when it Only Refund Method",
+        "refund_fee": 0
+      },
+       {
+        "record_type": "Debit",
+        "status": "FULL_REFUND",
+        "partner_order_id": "1123456789021234567890",
+        "currency": "JPY",
+        "create_time": "2021/12/31 23:59:59",
+        "channel": "oRakutenPay",
+        "real_fee": 99999999,
+        "order_body": "決済時に入力された取引備考",
+        "order_id": "Original ID OF Each Brands",
+        "partner_refund_id": "when it Only Refund Method",
+        "refund_id": "Also when it Only Refund Method",
+        "refund_fee": 99999999
+      },
+       {
+        "record_type": "Credit",
+        "status": "PARTIAL_REFUND",
+        "partner_order_id": "1123456789021234567890",
+        "currency": "JPY",
+        "create_time": "2021/12/31 23:59:59",
+        "channel": "oRakutenPay",
+        "real_fee": 99999999,
+        "order_body": "決済時に入力された取引備考",
+        "order_id": "Original ID OF Each Brands",
+        "partner_refund_id": "when it Only Refund Method",
+        "refund_id": "Also when it Only Refund Method",
+        "refund_fee": 99999999
+      }
+    ]
+  },
+  "balanceAmount": null
+}
