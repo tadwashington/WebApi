@@ -14,7 +14,7 @@ apps = Flask(__name__)
 
 # 支払確認API
 @apps.route("/gateway/api/v1/qr/checkorder", methods=['GET'])
-def getCPMReq():
+def get_cpm_req():
     params = request.args
     headers = request.headers
     # print("Can You See a Content-Type? " + headers.get('Content-Type'))
@@ -29,23 +29,21 @@ def getCPMReq():
     for p in params:
         print("Can You See a RequestHeader? " + p)
     response = {}
-    resjson: bytes = json.dumps({'message': 'getMethod'}).encode("utf-8")
     if 'param' in params:
         response.setdefault('res', 'param is : ' + params.get('param'))
-    # return make_response(jsonify(resp))
     # JSONファイルを読込んで還す
     p = ['cpmGetting.json', 'cpmGettingING.json']
     pt = random.choice(p)
     f = open(pt, 'r', encoding="utf-8_sig")
     # f = open('cpmGetting.json', 'r', encoding="utf-8_sig")
     jsn = json.load(f)
-    resjson: bytes = json.dumps(jsn).encode("utf-8")
-    return make_response(resjson)
+    reason = json.dumps(jsn).encode("utf-8")
+    return make_response(reason)
 
 
 # 返金確認API
 @apps.route("/gateway/api/v1/qr/checkrefunds", methods=['GET'])
-def getRefundReq():
+def get_refund_req():
     params = request.args
     headers = request.headers
     # print("Can You See a Content-Type? " + headers.get('Content-Type'))
@@ -65,13 +63,13 @@ def getRefundReq():
     f = open(pt, 'r', encoding="utf-8_sig")
     # f = open('cpmGetting.json', 'r', encoding="utf-8_sig")
     jsn = json.load(f)
-    resjson: bytes = json.dumps(jsn).encode("utf-8")
-    return make_response(resjson)
+    reasons: bytes = json.dumps(jsn).encode("utf-8")
+    return make_response(reasons)
 
 
 # 取引照会(店舗単位)API
 @apps.route("/gateway/api/v1/qr/orders", methods=['GET'])
-def getOrdersReq():
+def get_orders_req():
     params = request.args
     headers = request.headers
     # print("Can You See a Content-Type? " + headers.get('Content-Type'))
@@ -93,13 +91,13 @@ def getOrdersReq():
     f = open('ordersRes.json', 'r', encoding="utf-8_sig")
     # f = open('cpmGetting.json', 'r', encoding="utf-8_sig")
     jsn = json.load(f)
-    resjson: bytes = json.dumps(jsn).encode("utf-8")
-    return make_response(resjson)
+    reasons: bytes = json.dumps(jsn).encode("utf-8")
+    return make_response(reasons)
 
 
 # QRコード支払 API
 @apps.route("/gateway/api/v1/qr/orders", methods=['PUT'])
-def putReqOrder():
+def put_req_order():
     '''
     Http Request Header 確認
     '''
@@ -128,15 +126,13 @@ def putReqOrder():
     # f = open('cpmResponse.json', 'r', encoding="utf-8_sig")
     f = open(pt, 'r', encoding="utf-8_sig")
     jsn = json.load(f)
-    resjson: bytes = json.dumps(jsn).encode("utf-8")
-    return make_response(resjson)
-    # resjson: bytes = json.dumps(jsn).encode("utf-8")
-    # resjson: bytes = json.dumps({'message': 'putMethod'}).encode("utf-8")
+    res_json: bytes = json.dumps(jsn).encode("utf-8")
+    return make_response(res_json)
 
 
 # 返金 API
 @apps.route("/gateway/api/v1/qr/refunds", methods=['PUT'])
-def putReqRefund():
+def put_req_refund():
     '''
     Http Request Header 確認
     '''
@@ -162,12 +158,12 @@ def putReqRefund():
     # f = open('cpmResponse.json', 'r', encoding="utf-8_sig")
     f = open(pt, 'r', encoding="utf-8_sig")
     jsn = json.load(f)
-    resjson: bytes = json.dumps(jsn).encode("utf-8")
-    return make_response(resjson)
+    reasons: bytes = json.dumps(jsn).encode("utf-8")
+    return make_response(reasons)
 
 
 @apps.route("/gateway/api/v1/login", methods=['POST'])
-def postAuthReq():
+def post_auth_req():
     params = request.json
     response = {}
     headers = request.headers
@@ -190,16 +186,12 @@ def postAuthReq():
 
     f = open("authPut.json", 'r', encoding="utf-8_sig")
     jsn = json.load(f)
-    resjson: bytes = json.dumps(jsn).encode("utf-8")
-    return make_response(resjson)
-    '''
-    resjson: bytes = json.dumps({'message': 'postMethod'}).encode("utf-8")
-    return make_response(resjson)
-    '''
+    reasons: bytes = json.dumps(jsn).encode("utf-8")
+    return make_response(reasons)
 
 
 @apps.route("/portal/queryapi/v1/qr/ordersforpartner", methods=['POST'])
-def postTradeReq():
+def post_trade_req():
     params = request.json
     response = {}
     headers = request.headers
@@ -222,8 +214,8 @@ def postTradeReq():
 
     f = open("authPut.json", 'r', encoding="utf-8_sig")
     jsn = json.load(f)
-    resjson: bytes = json.dumps(jsn).encode("utf-8")
-    return make_response(resjson)
+    reasons: bytes = json.dumps(jsn).encode("utf-8")
+    return make_response(reasons)
 
 
 class MyTcpHandler(socketserver.BaseRequestHandler):
@@ -240,7 +232,7 @@ def app(environ, start_response):
         ('Access-Control-Allow-Origin', '*'),
     ]
     start_response(status, headers)
-    return [json.dumps({'message':'hoge'}).encode("utf-8")]
+    return [json.dumps({'message': 'hoge'}).encode("utf-8")]
 
 
 # 自身のIPアドレスを取得する
@@ -252,13 +244,6 @@ def getaddr():
     tp = ""
     for t in ip:
         tp = t
-    '''
-    for t in ip:
-        print("Ip=: {}".format(t))
-        if len(readjson(t)) > 0:
-            tp = t
-            break
-    '''
     return tp
 
 
