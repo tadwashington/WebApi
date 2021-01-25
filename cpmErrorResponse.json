@@ -1,0 +1,7 @@
+{
+  "returnCode": "XX10000",
+  "returnMessage": "",
+  "msgSummaryCode": "S0012",
+  "msgSummary": "残高不足エラーです。",
+  "balanceAmount": null
+}

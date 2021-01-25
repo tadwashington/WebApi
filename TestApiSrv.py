@@ -32,7 +32,7 @@ def get_cpm_req():
     if 'param' in params:
         response.setdefault('res', 'param is : ' + params.get('param'))
     # JSONファイルを読込んで還す
-    p = ['cpmGetting.json', 'cpmGettingING.json']
+    p = ['cpmGetting.json', 'cpmGettingING.json', 'cpmGetErrorResponse.json']
     pt = random.choice(p)
     f = open(pt, 'r', encoding="utf-8_sig")
     # f = open('cpmGetting.json', 'r', encoding="utf-8_sig")
@@ -121,7 +121,7 @@ def put_req_order():
     # windowsで動かす場合にテキストファイルをloadすると勝手に「cp932」でloadされてしまうらしい
       ので、open関数にencoding="utf-8_sig"を明示的に指定する
     '''
-    p = ['cpmResponse.json', 'cpmResponseIng.json']
+    p = ['cpmResponse.json', 'cpmResponseIng.json', 'cpmErrorResponse.json']
     pt = random.choice(p)
     # f = open('cpmResponse.json', 'r', encoding="utf-8_sig")
     f = open(pt, 'r', encoding="utf-8_sig")
