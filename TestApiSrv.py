@@ -21,11 +21,11 @@ def get_cpm_req():
     '''
     Http Request Header 確認
     '''
-    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
-    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
-    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
-    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
-    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    print("Can You See a X-GCP-Time? " + headers.get('X-GCP-Time'))
+    print("Can You See a X-GCP-NonceStr? " + headers.get('X-GCP-NonceStr'))
+    print("Can You See a X-GCPGCP-Sign? " + headers.get('X-GCPGCP-Sign'))
+    print("Can You See a X-GCPGCP-loginId? " + headers.get('X-GCPGCP-loginId'))
+    print("Can You See a X-GCPGCP-serialNo? " + headers.get('X-GCPGCP-serialNo'))
     for p in params:
         print("Can You See a RequestHeader? " + p)
     response = {}
@@ -50,11 +50,11 @@ def get_refund_req():
     '''
     Http Request Header 確認
     '''
-    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
-    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
-    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
-    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
-    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    print("Can You See a X-GCP-Time? " + headers.get('X-GCP-Time'))
+    print("Can You See a X-GCP-NonceStr? " + headers.get('X-GCP-NonceStr'))
+    print("Can You See a X-GCPGCP-Sign? " + headers.get('X-GCPGCP-Sign'))
+    print("Can You See a X-GCPGCP-loginId? " + headers.get('X-GCPGCP-loginId'))
+    print("Can You See a X-GCPGCP-serialNo? " + headers.get('X-GCPGCP-serialNo'))
     for p in params:
         print("Can You See a RequestHeader? " + p)
     # JSONファイルを読込んで還す
@@ -76,11 +76,11 @@ def get_orders_req():
     '''
     Http Request Header 確認
     '''
-    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
-    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
-    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
-    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
-    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    print("Can You See a X-GCP-Time? " + headers.get('X-GCP-Time'))
+    print("Can You See a X-GCP-NonceStr? " + headers.get('X-GCP-NonceStr'))
+    print("Can You See a X-GCPGCP-Sign? " + headers.get('X-GCPGCP-Sign'))
+    print("Can You See a X-GCPGCP-loginId? " + headers.get('X-GCPGCP-loginId'))
+    print("Can You See a X-GCPGCP-serialNo? " + headers.get('X-GCPGCP-serialNo'))
     for p in params:
         print("Can You See a RequestHeader? " + p)
     # JSONファイルを読込んで還す
@@ -102,12 +102,11 @@ def put_req_order():
     Http Request Header 確認
     '''
     headers = request.headers
-    print("Can You See a Content-Type? " + headers.get('Content-Type'))
-    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
-    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
-    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
-    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
-    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    print("Can You See a X-GCP-Time? " + headers.get('X-GCP-Time'))
+    print("Can You See a X-GCP-NonceStr? " + headers.get('X-GCP-NonceStr'))
+    print("Can You See a X-GCPGCP-Sign? " + headers.get('X-GCPGCP-Sign'))
+    print("Can You See a X-GCPGCP-loginId? " + headers.get('X-GCPGCP-loginId'))
+    print("Can You See a X-GCPGCP-serialNo? " + headers.get('X-GCPGCP-serialNo'))
 
     payload = request.json
     print("Can You Get Json Params [order_id]? " + payload.get('order_id'))
@@ -138,11 +137,11 @@ def put_req_refund():
     '''
     headers = request.headers
     print("Can You See a Content-Type? " + headers.get('Content-Type'))
-    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
-    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
-    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
-    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
-    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    print("Can You See a X-GCP-Time? " + headers.get('X-GCP-Time'))
+    print("Can You See a X-GCP-NonceStr? " + headers.get('X-GCP-NonceStr'))
+    print("Can You See a X-GCPGCP-Sign? " + headers.get('X-GCPGCP-Sign'))
+    print("Can You See a X-GCPGCP-loginId? " + headers.get('X-GCPGCP-loginId'))
+    print("Can You See a X-GCPGCP-serialNo? " + headers.get('X-GCPGCP-serialNo'))
 
     payload = request.json
     print("Can You Get Json Params [refund_id]? " + payload.get('refund_id'))
@@ -171,11 +170,11 @@ def post_auth_req():
     '''
     Http Request Header 確認
     '''
-    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
-    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
-    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
-    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
-    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    print("Can You See a X-GCP-Time? " + headers.get('X-GCP-Time'))
+    print("Can You See a X-GCP-NonceStr? " + headers.get('X-GCP-NonceStr'))
+    print("Can You See a X-GCPGCP-Sign? " + headers.get('X-GCPGCP-Sign'))
+    print("Can You See a X-GCPGCP-loginId? " + headers.get('X-GCPGCP-loginId'))
+    print("Can You See a X-GCPGCP-serialNo? " + headers.get('X-GCPGCP-serialNo'))
 
     payload = request.json
     print("Can You Get Json Params [loginId]? " + payload.get('loginId'))
@@ -199,11 +198,11 @@ def post_trade_req():
     '''
     Http Request Header 確認
     '''
-    print("Can You See a X-LAKALA-Time? " + headers.get('X-LAKALA-Time'))
-    print("Can You See a X-LAKALA-NonceStr? " + headers.get('X-LAKALA-NonceStr'))
-    print("Can You See a X-LAKALA-Sign? " + headers.get('X-LAKALA-Sign'))
-    print("Can You See a X-LAKALA-loginId? " + headers.get('X-LAKALA-loginId'))
-    print("Can You See a X-LAKALA-serialNo? " + headers.get('X-LAKALA-serialNo'))
+    print("Can You See a X-GCP-Time? " + headers.get('X-GCP-Time'))
+    print("Can You See a X-GCP-NonceStr? " + headers.get('X-GCP-NonceStr'))
+    print("Can You See a X-GCPGCP-Sign? " + headers.get('X-GCPGCP-Sign'))
+    print("Can You See a X-GCPGCP-loginId? " + headers.get('X-GCPGCP-loginId'))
+    print("Can You See a X-GCPGCP-serialNo? " + headers.get('X-GCPGCP-serialNo'))
 
     payload = request.json
     print("Can You Get Json Params [loginId]? " + payload.get('loginId'))
