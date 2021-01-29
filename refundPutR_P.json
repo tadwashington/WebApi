@@ -11,7 +11,7 @@
     "result_code": "WAITING",
     "partner_order_id": "11234567890123456789",
     "amount": 88888888,
-    "channel": "DorakutenAmazonPay",
+    "channel": "GinkoPay",
     "order_id": "ORDER ID IS NOTHING BECAUSE YOU ARE AWSOME SO MUCH...",
     "create_time": "1900-01-01 00:00:00",
     "pay_time": "1901/02/01 23:59:59",

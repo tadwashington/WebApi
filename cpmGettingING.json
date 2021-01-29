@@ -10,7 +10,7 @@
     "return_code": "SUCCESS",
     "result_code": "PAYING",
     "real_fee": 99999990,
-    "channel": "DorakutenAmazonPay",
+    "channel": "RakutenPay",
     "create_time": "1900/01/01 01:01:01",
     "total_fee": 99999999,
     "pay_time": "1901/02/01 23:59:59",

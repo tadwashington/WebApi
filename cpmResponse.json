@@ -12,7 +12,7 @@
     "create_time": "1900-01-01 00:00:00",
     "total_fee": 99999999,
     "real_fee": 99999990,
-    "channel": "DorakutenAmazonPay",
+    "channel": "auPAY",
     "pay_time": "1901/02/01 23:59:59",
     "order_body": "取引備考 支払い完了でございます"
   },
