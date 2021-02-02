@@ -33,3 +33,13 @@ QRコード支払(CPM)
 /gateway/api/v1/qr/orders
 取引記録照会(企業単位)
 /portal/queryapi/v1/qr/ordersforpartner
+
+【簡単な仕様】
+各メソッドのリターン値を設定したJSONファイルをプロジェクト内に用意
+支払APIの場合だと
+「cpmResponse.json(正常), cpmResponseIng.json(処理中), cpmErrorResponse.json(エラー)」
+それらをランダムに読込、リターンさせて本体モジュールの挙動を確認している。
+なお項目値は仕様上の相違がない程度のものなので実際値とは異なる。(スタブ形式)
+
+ベンダーからリターン値サンプルが貰えればそれをあてることで
+よりリアルな挙動を確認出来るのだが…な
